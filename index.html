@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Portfolio Website | Hayyan Raza </title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./a.png">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="stylesheet" href="./mediaquries.css"> -->
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body >
+
+    <!-- SECTION BG GRID -->
+<section class="background-grid">
+    <div class="grid-container">
+        <!-- The particles will be generated and animated using JavaScript -->
+    </div>
+</section>
+
+
+
+
+    <header>
+        <nav>
+            <img src="./Assets/logo (2).png" alt="LOGO" style="margin-left: 20px;">
+            <ul class="nav-links" style="margin-right: 20px;">
+                <li><a href="#" class="active">About</a></li><b>|</b>
+                <li><a href="#portfolio-loc">Services</a></li><b>|</b>
+                <li><a href="#contact-loc">Contact</a></li>
+            </ul>
+            <span class="menu-button" onclick="toggleMenu()">☰</span>
+        </nav>
+        <div class="landing">
+            <div class="intro">
+                <h3><b style="font-size: 32px;">I'M A</b> <span>Game Developer</span></h3>
+                <h2><span class="sub-text">UI/UI Designer &<br><b style="font-weight: 400;">Web Developer</b></span></h2>
+                <a href="#contact-loc">Contact Me</a>
+            </div>
+            <img class="pfp" src="./a.png" alt="">
+            <div class="socials">
+                <div class="line"></div>
+                <a target="_blank" href="https://www.linkedin.com/in/hayyangamedev/">
+                    <i class="ri-linkedin-fill"></i>
+                </a>
+                <a target="_blank" href="https://github.com/HayyanRaza1">
+                    <i class="ri-github-fill"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <div class="mobile-menu" id="mobileMenu" style="display: none;">
+        <ul>
+            <li><a href="#" class="active">About</a></li>
+            <li><a href="#portfolio-loc">Services</a></li>
+            <li><a href="#contact-loc">Contact</a></li>
+        </ul>
+        <img src="./a.png" alt="" class="pfp-icon">
+    </div>
+
+    <!-- Glow Divs -->
+    <div class="Glow"></div>
+    <div class="Glow right-b"></div>
+    
+
+    <!-- mouse-animated icon -->
+    <div class="mouse-anim">
+        <div class="mouse-icon"><span class="mouse-wheel"></span></div>
+    </div>
+
+
+    <section class="Skills">
+        <div class="skill-inner">
+            <div class="skill-slider">
+                <div class="marquee">
+                    <img src="./C++-Logo.wine.svg" class="marqueelogo marquee-logo">
+                    <img src="./c-sharp-c-logo-02F17714BA-seeklogo.com.png" class="marqueelogo marquee-logo">
+                    <img src="./css.svg" class="marqueelogo marquee-logo">
+                    <img src="./figma-logo.png" class="marqueelogo marquee-logo">
+                    <img src="./git.svg" class="marqueelogo marquee-logo">
+                    <img src="./python.webp" class="marqueelogo marquee-logo"
+                        style="width: 150px; height: 150px; transform: translate(0px , -50px);">
+                    <img src="./gmail.png" class="marqueelogo marquee-logo">
+                    <img src="./html.svg" class="marqueelogo marquee-logo">
+                    <img src="./js.svg" class="marqueelogo marquee-logo">
+                    <img src="./unity.png" class="marqueelogo marquee-logo">
+                    <img src="./mysql.svg" class="marqueelogo marquee-logo">
+                </div>
+            </div>
+        </div>
+    </section>
+<section class="about-me">
+    <div class="about-me-content">
+        <div class="about-me-image-container">
+            <img src="./software-language-programmer-avatar-KCCEEN.jpg" alt="About Me Image" class="about-me-image">
+        </div>
+        <div class="about-me-text">
+            <h2>About Me</h2>
+            <p>Hello! I'm Hayyan Raza, a passionate game developer, UI/UX designer, and web developer. With a background
+                in software engineering, I specialize in creating immersive gaming experiences and user-friendly
+                interfaces.</p>
+            <p>I have experience working with Unity, C++, and various web development frameworks, continuously learning
+                and innovating along the way.</p>
+                <a href="#contact-loc">Contact Me</a>
+        </div>
+        
+    </div>
+</section>
+<section class="services">
+    <h2>My Services</h2>
+    <div class="services-content">
+        <div class="service-card">
+            <img src="web dev.png" alt="Web Development" class="service-icon">
+            <h3>Web Development</h3>
+            <p>I build responsive, user-friendly websites using modern web technologies to help bring your vision
+                online.</p>
+        </div>
+        <div class="service-card">
+            <img src="gamedevcontroller-removebg-preview.png" alt="Game Development" class="service-icon">
+            <h3>Game Development</h3>
+            <p>I create immersive gaming experiences using Unity, with a focus on fun, engagement, and performance.</p>
+        </div>
+        <div class="service-card">
+            <img src="ui-removebg-preview.png" alt="UI/UX Design" class="service-icon">
+            <h3>UI/UX Design</h3>
+            <p>I design intuitive user interfaces that enhance the user experience and make products more enjoyable to
+                use.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="projects">
+    <h2>My Projects</h2>
+    <div class="projects-content">
+        <div class="project-card">
+            <img src="./Projects/WhatsApp Image 2024-09-07 at 12.30.41 PM.jpeg" alt="Project 1" class="project-icon">
+            <h3>Survival 3D</h3>
+            <p>This project was developed for a client, featuring advanced enemy AI. The first enemy, a cannibal,
+                actively pursues and attacks the player, while the second, a boar, adds another layer of challenge.</p>
+        </div>
+        <div class="project-card">
+            <img src="./Projects/WhatsApp Image 2024-09-07 at 12.22.05 PM.jpeg" alt="Project 2" class="project-icon">
+            <h3>Minecraft Clone</h3>
+            <p>This project is a recreation of Minecraft with additional features, including enemy AI, sword combat with
+                zombies, block breaking and placement systems, and a functional hotbar for item selection.</p>
+        </div>
+        <div class="project-card">
+            <img src="./Projects/UI-UX.JPG" alt="Project 3" class="project-icon">
+            <h3>App UI Design</h3>
+            <p>This is a personal project where I designed and developed the UI for an application, allowing me to hone
+                my skills in both UI design and app development.</p>
+        </div>
+    </div>
+</section>
+
+<section class="contact-me" id="#contact-loc">
+    <h2>Contact Me</h2>
+    <p>If you have any questions or want to collaborate, feel free to get in touch using the form below. I’ll get back
+        to you as soon as possible.</p>
+
+    <form class="contact-form"  method="POST" >
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" placeholder="Write your message here" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Send Message</button>
+    </form>
+</section>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+/* Base Styles (Mobile First Design) */
+/* These styles apply to all devices by default */
+.container {
+    padding: 10px;
+}
+
+.header {
+    font-size: 16px;
+}
+
+.content {
+    font-size: 14px;
+}
+
+/* Small Mobile Phones (320px and up) */
+@media (min-width: 320px) {
+
+    .pfp,
+    .socials {
+        position: absolute;
+        right: 10px;
+    }
+    .header{
+        padding: 30px;
+    }
+
+    /* Add other small mobile-specific styles here */
+}
+
+/* Medium Mobile Phones (481px and up) */
+@media (min-width: 481px) {
+
+    .pfp,
+    .socials {
+        right: 20px;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .header {
+        font-size: 18px;
+    }
+
+    .content {
+        font-size: 16px;
+    }
+}
+
+/* Large Mobile Phones and Tablets (768px and up) */
+@media (min-width: 768px) {
+
+    .pfp,
+    .socials {
+        right: 30px;
+    }
+
+    .container {
+        padding: 30px;
+    }
+
+    .header {
+        font-size: 20px;
+    }
+
+    .content {
+        font-size: 18px;
+    }
+}
+
+/* Extra Large Tablets and Small Desktops (1024px and up) */
+@media (min-width: 1024px) {
+
+    .pfp,
+    .socials {
+        right: 40px;
+    }
+
+    .container {
+        padding: 40px;
+    }
+
+    .header {
+        font-size: 24px;
+    }
+
+    .content {
+        font-size: 20px;
+    }
+}

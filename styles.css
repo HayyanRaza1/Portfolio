@@ -1,0 +1,906 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    background-color: #34353b;
+    font-family: "Roboto", sans-serif;
+}
+
+header {
+    height: 100vh;
+    padding: 32px 100px;
+    /* background: linear-gradient(black, rgba(0, 0, 0, 0)), url(./.png) no-repeat right; */
+    background-size: contain;
+    width: 100vw;
+    
+}
+
+b{
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+}
+
+header nav {
+    margin-top:-45px;
+    margin-left: -100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    z-index: 99;
+    background: rgba(7, 7, 7, 0.11);
+        /* Semi-transparent background */
+    backdrop-filter: blur(10px);
+        /* Apply the blur effect */
+}
+
+header nav img {
+    margin-top: 10px;
+    height: 200px;
+    width: 200px;
+    object-fit: contain;
+    
+}
+.pfp{
+    z-index: 10;
+    height: 400px;
+    width: auto;
+}
+header nav ul {
+    display: flex;
+}
+
+header nav ul li {
+    list-style: none;
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    font-family: "Work Sans", sans-serif;
+    color: #98999a;
+    text-decoration: none;
+    transition: color 0.5s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li .active {
+    color: #fbfbfb;
+}
+
+header nav .search {
+    height: 48px;
+    width: 200px;
+    background-color: #3d3e42;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 4px;
+    border-radius: 10px;
+}
+
+header nav .search input {
+    border: none;
+    background-color: transparent;
+    width: 80%;
+    color: #fbfbfb;
+    outline: none;
+}
+
+header nav .search input::placeholder {
+    color: #98999a;
+    font-size: 16px;
+}
+
+header nav .search i {
+    color: #98999a;
+}
+
+.landing {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-between;
+}
+.landing >*{
+    z-index: 10;
+}
+
+.landing .intro {
+    display: flex;
+    flex-direction: column;
+}
+
+.landing .intro h3, .landing .intro h2 {
+    color: #fbfbfb;
+    font-weight: 400;
+    font-size: 32px;
+    margin-left: 10vw;
+}
+
+.landing .intro h2 {
+    font-family: 'Work Sans', sans-serif; /* Use Work Sans font */
+    font-weight: 100; /* Normal weight */
+    color: #ffffff; /* White color */
+    font-size:32px; 
+    line-height: 1.5; 
+}
+a{
+    text-decoration: none;
+}
+
+.landing .intro h3 span {
+    background: linear-gradient(334deg, #308cae, #39bd8d); /* Standard syntax */
+    -webkit-background-clip: text; /* Ensure the gradient is applied to text */
+    -webkit-text-fill-color: transparent; /* Make the text color transparent to show the gradient */
+    font-weight: 700;
+    font-size: 3.5rem;
+    font-family: "Work Sans", sans-serif;
+
+    
+}
+
+.intro {
+    margin-left: -100px;
+}
+.intro a {
+    display: inline-block; /* Makes the anchor behave like a button */
+    height: 48px;
+    width: 144px;
+    line-height: 48px; /* Centers the text vertically */
+    margin-top: 2.5vh;
+    margin-left: 10vw;
+    background: -webkit-linear-gradient(160deg, #308cae, #39bd8d); /* For WebKit browsers */
+    background: linear-gradient(160deg, #308cae, #39bd8d); /* Standard syntax for other browsers */
+    color: white; /* Sets the text color */
+    border-radius: 25px;
+    border: 2px solid #025b7c; /* Add border and specify thickness */
+    font-size: 16px;
+    text-align: center; /* Centers the text horizontally */
+    text-decoration: none; /* Removes underline from the anchor */
+    font-family: Arial, sans-serif; /* Add a font */
+    transition: background 0.4s ease, border-color 0.4s ease; /* Smooth transition */
+}
+
+.intro a:hover {
+    background: -webkit-linear-gradient(160deg, #39bd8d, #308cae); /* Reverses gradient on hover */
+    background: linear-gradient(160deg, #39bd8d, #308cae); /* For non-webkit browsers */
+    border-color: #39bd8d; /* Optional change of border color on hover */
+    color: white;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    margin-top: 50vh;
+}
+
+.socials .line {
+    background-color: #37b393;
+    height: 15vh;
+    width: 2.5px;
+}
+
+.socials i {
+    color: #fbfbfb;
+    font-size: 36px;
+}
+
+
+/* BG GRID  */
+/* Reset the body and html to ensure full coverage of the viewport */
+/* Ensure body and html fill the entire viewport */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Background grid styling */
+.background-grid {
+    position: fixed; /* Fixed positioning so it stays in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(#121212, black);
+    z-index: -1; /* Ensure it's behind other content */
+}
+
+/* Create the stable grid effect */
+.background-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #37b3940d 1px, transparent 1px),
+                      linear-gradient(to bottom, #37b3940d 1px, transparent 1px);
+    background-size: 80px 120px; /* Adjust grid size as needed */
+    z-index: 0; /* Ensure it's behind other content */
+}
+
+
+
+/* Custom clipping path for particles */
+.particle {
+    position: absolute;
+    width: 20px; /* Adjust size */
+    height: 40px; /* Adjust size */
+    background-color: rgb(255, 255, 255); /* Water drop color */
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 5; /* Ensure particles are above the grid */
+    clip-path: polygon(45.8% 0%, 49.9% 95%, 46.3% 140%, 41.7% 95%);
+    transform: translateX(-9px); /* Adjust this value to fine-tune the position */
+}
+
+
+
+/* Define custom path using the clip-path property */
+@supports (   clip-path: polygon(48.8% 0%, 52.9% 90%, 49.3% 120%, 44.7% 90%)) {
+    .particle.custom-clip {
+        clip-path: polygon(48.8% 0%, 52.9% 90%, 49.3% 120%, 44.7% 90%);
+ /* Bullet */
+
+    }
+}
+
+.Glow {
+    opacity: 20%;
+    border-radius: 50%;
+    border: 1px transparent;
+    box-shadow: 0 0 30px 30px rgba(0, 248, 248, 0.25), 0 0 60px 60px rgba(0, 248, 248, 0.25);
+    background: rgba(0, 248, 248, 0.5);
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    height: 200px;
+    width: 200px;
+    filter: blur(5px);
+    transition: all 1s ease;
+}
+.right-b{
+    top: 400px;
+    left: 1000px;
+}
+
+.mouse-anim {
+    position: absolute; 
+    width: 50px;
+    height: 70px; 
+    top: 550px;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+}
+
+.mouse-icon {
+    width: 25px;
+    height: 45px;
+    border: 2px solid #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    border-radius: 15px;
+    cursor: pointer;
+    position: absolute; /* Absolute positioning */
+    text-align: center;
+    animation: bounce 4s ease-in-out infinite;
+}
+
+.mouse-wheel {
+    height: 8px;
+    margin: 5px auto 0;
+    display: block;
+    width: 3px;
+    background-color: #fff;
+    border-radius: 77px;
+    animation: wheel-up-down 1.6s infinite;
+}
+
+/* Slower bounce animation for the mouse icon */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px); /* Upward movement */
+    }
+    60% {
+        transform: translateY(-5px); /* Slightly lower bounce */
+    }
+}
+
+/* Up and down movement with fade-out effect */
+@keyframes wheel-up-down {
+    0% {
+        transform: translateY(0);
+        opacity: 1; /* Fully visible at the top */
+    }
+    50% {
+        transform: translateY(8px);
+        opacity: 0; /* Fades out as it moves down */
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1; /* Reappears at the top */
+    }
+}
+.Skills {
+    margin-top: 50px;
+}
+
+.Skills>.skill-inner>h3 {
+    margin: 100px;
+    border: 1px solid transparent;
+    width: fit-content;
+    border-radius: 50px;
+    padding: 15px;
+    background: linear-gradient(160deg, #308cae, #39bd8d);
+    border-image-slice: 1;
+    font-size: 18px;
+    font-weight: 300;
+    font-family: "Work Sans";
+    color: white;
+}
+
+/* Container for the skill slider */
+.skill-slider {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    /* Adjust height based on the size of your icons */
+}
+
+/* Marquee effect container */
+.marquee {
+    display: flex;
+    width: 200%;
+    /* Double the width of the container */
+    animation: marquee 25s linear infinite;
+    /* Adjust the duration for speed */
+}                                                                                   
+
+/* Marquee item styling */
+.marqueelogo {
+    width: 60px;
+    /* Fixed width for icons */
+    height: 60px;
+    /* Fixed height for icons */
+    object-fit: contain;
+    /* Ensures images are scaled properly without distortion */
+    margin-right: 150px;
+    /* Space between images */
+    filter: grayscale(1);
+    /* Apply grayscale filter */
+}
+
+.marqueelogo:hover {
+    filter: grayscale(0);
+    /* Remove grayscale on hover */
+}
+
+/* Keyframes for the sliding animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+}
+
+/* Style for the marquee container */
+.skill-slider {
+    overflow: hidden;
+    /* Hides overflowed content */
+    white-space: nowrap;
+    /* Prevents the content from wrapping */
+}
+
+.about-me {
+    padding: 100px 0;
+    backdrop-filter: blur(px);
+    margin-top: -50px ;
+}
+
+.about-me-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px;
+    padding: 0 20px;
+}
+
+.about-me-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00000000;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.about-me-image {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+/* Text content */
+.about-me-text {
+    flex: 2;
+    background-color: rgba(0, 0, 0, 0.116);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    max-width: 600px;
+    display: block;
+}
+
+.about-me-text h2 {
+    
+    margin-bottom: 20px;
+    background: linear-gradient(334deg, #308cae, #39bd8d);
+        /* Standard syntax */
+        -webkit-background-clip: text;
+        /* Ensure the gradient is applied to text */
+        -webkit-text-fill-color: transparent;
+        /* Make the text color transparent to show the gradient */
+        font-weight: 700;
+        font-size: 2.5rem;
+        font-family: "Work Sans", sans-serif;
+}
+
+.about-me-text p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #fffdfd;
+    margin-bottom: 20px;
+}
+.about-me-text a {
+    background: linear-gradient(160deg, #308cae, #39bd8d);
+    color: white;
+    border-radius: 25px;
+    border: 2px solid #025b7c;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    transition: background 0.4s ease, border-color 0.4s ease;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+/* Responsive for mobile */
+@media (max-width: 768px) {
+    .about-me-content {
+        flex-direction: column;
+    }
+
+    .about-me-image-container {
+        margin-bottom: 30px;
+    }
+}
+
+
+
+/* Services Section */
+.services {
+    padding: 100px 20px;
+    background-color: #0000002a;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 50px;
+    background: linear-gradient(334deg, #308cae, #39bd8d);
+        /* Standard syntax */
+        -webkit-background-clip: text;
+        /* Ensure the gradient is applied to text */
+        -webkit-text-fill-color: transparent;
+        /* Make the text color transparent to show the gradient */
+        font-weight: 700;
+        font-size: 2.5rem;
+}
+
+/* Service Cards Grid */
+.services-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Each Service Card */
+.service-card {
+    background-color: #ffffff06;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Service Icons */
+.service-icon {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/* Service Card Titles */
+.service-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #308cae;
+}
+
+/* Service Descriptions */
+.service-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .services-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Projects Section */
+.projects {
+    padding: 100px 20px;
+    /* background-color: #f9f9f9; */
+    text-align: center;
+}
+
+.projects h2 {
+    margin-bottom: 50px;
+    background: linear-gradient(334deg, #308cae, #39bd8d);
+        /* Standard syntax */
+        -webkit-background-clip: text;
+        /* Ensure the gradient is applied to text */
+        -webkit-text-fill-color: transparent;
+    /* Make the text color transparent to show the gradient */
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+/* Project Cards Grid */
+.projects-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+/* Each Project Card */
+.project-card {
+    /* background-color: #ffffff; */
+    background-color: #ffffff06;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+.project-card img{
+    border: 1px transparent;
+    border-radius: 25px;
+}
+
+/* Project Icons */
+.project-icon {
+    width: 300px;
+    height: 300px;
+    
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+/* Project Card Titles */
+.project-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: #3db7f5;
+}
+
+/* Project Descriptions */
+.project-card p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .projects-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+/* Contact Section */
+.contact-me {
+    padding: 100px 20px;
+    /* background-color: #f4f4f4; */
+    text-align: center;
+}
+
+.contact-me h2 {
+    background: linear-gradient(334deg, #308cae, #39bd8d);
+        /* Standard syntax */
+        -webkit-background-clip: text;
+        /* Ensure the gradient is applied to text */
+        -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    
+}
+
+.contact-me p {
+    
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Contact Form */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffffff00;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #308cae;
+    outline: none;
+}
+
+.submit-button{
+    display: inline-block;
+    height: 48px;
+    width: 144px;
+    background: -webkit-linear-gradient(160deg, #308cae, #39bd8d);
+    background: linear-gradient(160deg, #308cae, #39bd8d);
+    color: white;
+    border-radius: 25px;
+    border: 2px solid #025b7c;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    transition: background 0.4s ease, border-color 0.4s ease;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #266c8e;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+    }
+}
+
+/* Mobile Navigation */
+@media (max-width: 768px) {
+    body header{
+        overflow-x: clip;
+        width: 100%;
+    }
+   .nav-links {
+       display: none;
+       flex-direction: column;
+       background-color: #333;
+       position: absolute;
+       top: 60px;
+       /* Position it below the nav */
+       right: 0;
+       width: 200px;
+       padding: 10px;
+       z-index: 100;
+   }
+
+   /* Show the menu icon */
+   .menu-icon {
+       display: block;
+       cursor: pointer;
+       font-size: 24px;
+   }
+
+   /* Default desktop behavior */
+   ul {
+       display: none;
+   }
+
+   /* Show the menu when active */
+   .nav-links.show {
+       display: flex;
+   }
+}
+
+/* //////gfhfh */
+/* Default styles for desktop */
+.menu-button {
+    display: none;
+}
+
+/* Mobile menu hidden by default */
+.mobile-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+    display: none;
+}
+
+.mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Media query for mobile (412px width) */
+@media (max-width: 412px) {
+    body{
+        max-width: 412px;
+        overflow-x: hidden;
+        position: relative;
+    }
+    /* Hide the main nav links and show the menu button */
+    nav ul.nav-links {
+        display: none;
+    }
+    .intro{
+        margin-top: -200px;
+        text-align: left;
+        
+    }
+    .intro  h2 .sub-text{
+        margin-left: -35px;
+    }
+    .intro h2 .sub-text b{
+        margin-left: -65px;
+    }
+    .pfp{
+        display: none;
+    }
+    .pfp-icon{
+        height: 90px;
+        width: 90px;
+        display:flex ;
+    }
+    .socials{
+        margin-top: 10px;
+    }
+    .mouse-anim{
+        left: 46%;
+    }
+    .Skills{
+        margin-top:-200px ;
+    }
+    .menu-button {
+        color:white;
+        display: block;
+        font-size: 24px;
+        cursor: pointer;
+        margin-right: 20px;
+        position:absolute;
+        right: 800px;
+    }
+    .services{
+        margin-left: 10px;
+        margin-top: -100px;
+    }
+    .about-me{
+        margin-top: -100px;
+    }
+    /* Center align the intro text on mobile */
+    .intro {
+        text-align: center;
+    }
+
+    /* Adjust image size for mobile */
+    .pfp {
+        width: 100px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
